@@ -35,7 +35,7 @@
     "url": "http://foundation.zurb.com"
   },
   "bugs": {
-    "url": "https://github.com/zurb/foundation-emails/issues"
+    "url": "https://github.com/mzednanreh/fe-for-vaes/issues"
   },
   "description": "A framework for responsive emails made by ZURB",
   "devDependencies": {
@@ -81,7 +81,7 @@
     "sassDir": "scss",
     "needs": "^0.8.0"
   },
-  "homepage": "https://github.com/zurb/foundation-emails#readme",
+  "homepage": "https://github.com/mzednanreh/fe-for-vaes#readme",
   "keywords": [
     "responsive",
     "emails"
@@ -90,7 +90,7 @@
   "name": "fe-for-vaes",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zurb/foundation-emails.git"
+    "url": "git+https://github.com/mzednanreh/fe-for-vaes.git"
   },
   "scripts": {
     "deploy:dist": "gulp dist",
