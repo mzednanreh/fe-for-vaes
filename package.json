@@ -1,105 +1,72 @@
 {
-  "_args": [
-    [
-      "fe-for-vaes@2.2.1",
-      "W:\\Work\\Emails\\Tests\\veeva-emails"
-    ]
-  ],
-  "_development": true,
-  "_from": "fe-for-vaes@2.2.1",
-  "_id": "fe-for-vaes@2.2.1",
-  "_inBundle": false,
-  "_integrity": "sha1-HzRCdiOV0GPVpi15B0CyQzqrF0c=",
-  "_location": "/fe-for-vaes",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "fe-for-vaes@2.2.1",
-    "name": "fe-for-vaes",
-    "escapedName": "fe-for-vaes",
-    "rawSpec": "2.2.1",
-    "saveSpec": null,
-    "fetchSpec": "2.2.1"
-  },
-  "_requiredBy": [
-    "#DEV:/",
-    "/inky"
-  ],
-  "_resolved": "https://registry.npmjs.org/foundation-emails/-/foundation-emails-2.2.1.tgz",
-  "_spec": "2.2.1",
-  "_where": "W:\\Work\\Emails\\Tests\\veeva-emails",
-  "author": {
-    "name": "ZURB",
-    "email": "foundation@zurb.com",
-    "url": "http://foundation.zurb.com"
-  },
-  "bugs": {
-    "url": "https://github.com/mzednanreh/fe-for-vaes/issues"
-  },
-  "description": "A framework for responsive emails made by ZURB",
-  "devDependencies": {
-    "browser-sync": "^2.9.10",
-    "cheerio": "^0.19.0",
-    "clipboard-js": "^0.2.0",
-    "foundation-docs": "github:zurb/foundation-docs",
-    "foundation-sites": "^6.2.0",
-    "gulp": "^3.8.11",
-    "gulp-autoprefixer": "^2.3.1",
-    "gulp-cached": "^1.1.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-cssnano": "^2.1.1",
-    "gulp-htmlmin": "^1.3.0",
-    "gulp-if": "^2.0.0",
-    "gulp-inject-string": "^1.1.0",
-    "gulp-inline-css": "^2.0.0",
-    "gulp-load-plugins": "^1.0.0-rc.1",
-    "gulp-prettify": "^0.4.0",
-    "gulp-prompt": "^0.1.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-rsync": "0.0.5",
-    "gulp-sass": "^2.1.0",
-    "gulp-sass-lint": "^1.1.1",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-wrap": "^0.11.0",
-    "gulp-zip": "^3.2.0",
-    "inky": "^1.3.6",
-    "lazypipe": "^1.0.1",
-    "motion-ui": "^1.1.1",
-    "multiline": "^1.0.2",
-    "octophant": "^1.0.0",
-    "panini": "^1.2.0",
-    "rimraf": "^2.4.2",
-    "run-sequence": "^1.1.2",
-    "siphon-media-query": "^1.0.0",
-    "supercollider": "^1.4.0",
-    "typeahead.js": "^0.11.1",
-    "zeroclipboard": "^2.2.0"
-  },
-  "eyeglass": {
-    "name": "fe-for-vaes",
-    "sassDir": "scss",
-    "needs": "^0.8.0"
-  },
-  "homepage": "https://github.com/mzednanreh/fe-for-vaes#readme",
+  "name": "foundation-for-vaes",
+  "version": "2.4.0",
+  "description": "A framework for responsive emails (veeva emails)",
   "keywords": [
     "responsive",
     "emails"
   ],
-  "license": "MIT",
-  "name": "fe-for-vaes",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mzednanreh/fe-for-vaes.git"
-  },
+  "style": "dist/foundation-emails.min.css",
+  "main": "dist/foundation-emails.css",
+  "author": "Foundation <contact@get.foundation> (https://get.foundation)",
   "scripts": {
-    "deploy:dist": "gulp dist",
-    "deploy:docs": "gulp deploy:docs",
-    "deploy:download": "gulp download",
-    "deploy:settings": "gulp settings",
-    "deploy:templates": "gulp templates",
     "start": "gulp",
-    "test:visual": "gulp test"
+    "test": "gulp test",
+    "dist": "gulp dist"
   },
-  "version": "2.2.1"
+  "repository": "git+https://github.com/mzednanreh/fe-for-vaes.git",
+  "bugs": "https://github.com/mzednanreh/fe-for-vaes/issues",
+  "devDependencies": {
+    "browser-sync": "^2.9.10",
+    "cheerio": "^1.0.0-rc.3",
+    "cssnano": "^4.1.10",
+    "foundation-docs": "foundation/foundation-docs",
+    "foundation-sites": "foundation/foundation-sites",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cached": "^1.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-inject-string": "^1.1.0",
+    "gulp-inline-css": "^3.4.0",
+    "gulp-load-plugins": "^2.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-prettify": "^0.5.0",
+    "gulp-prompt": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rsync": "0.0.8",
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-wrap": "^0.15.0",
+    "gulp-zip": "^5.0.1",
+    "inky": "^1.4.1",
+    "js-yaml": "^3.14.0",
+    "lazypipe": "^1.0.1",
+    "lodash.template": ">=4.5.0",
+    "marked": "^4.0.10",
+    "motion-ui": "^2.0.3",
+    "multiline": "^2.0.0",
+    "octophant": "^1.0.0",
+    "panini": "^1.7.1",
+    "rimraf": "^3.0.0",
+    "run-sequence": "^2.2.1",
+    "sass": "^1.35.2",
+    "siphon-media-query": "^1.0.0",
+    "supercollider": "^1.5.2",
+    "typeahead.js": "^0.11.1",
+    "yargs": "^14.2.0"
+  },
+  "resolutions": {
+    "minimist": "^1.2.5",
+    "braces": "^2.3.2",
+    "lodash.template": ">=4.5.0"
+  },
+  "license": "MIT",
+  "eyeglass": {
+    "name": "foundation-for-vaes",
+    "sassDir": "scss",
+    "needs": "^0.8.0"
+  }
 }

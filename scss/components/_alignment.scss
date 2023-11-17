@@ -36,27 +36,51 @@ span.text-center {
   text-align: center;
 }
 
-@if $small-alignments-used == true {
+@if $turn-On-Off-VAE-Control == true {
+  @if $small-alignments-used == true {
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      .small-float-center {
+        margin: 0 auto !important;
+        float: none !important;
+        text-align: center !important;
+      }
+  
+      .small-text-center {
+        text-align: center !important;
+      }
+  
+      .small-text-left {
+        text-align: left !important;
+      }
+  
+      .small-text-right {
+        text-align: right !important;
+      }
+    }
+  }
+} @else {
   @media only screen and (max-width: #{$global-breakpoint}) {
     .small-float-center {
       margin: 0 auto !important;
       float: none !important;
       text-align: center !important;
     }
-  
+
     .small-text-center {
       text-align: center !important;
     }
-  
+
     .small-text-left {
       text-align: left !important;
     }
-  
+
     .small-text-right {
       text-align: right !important;
     }
   }
 }
+
+
 
 img.float-left {
   float: left;
@@ -87,4 +111,20 @@ th {
   }
 }
 
+td.columns,
+td.column,
+th.columns,
+th.column {
+  &[valign="bottom"] {
+    vertical-align: bottom;
+  }
+}
 
+td.columns,
+td.column,
+th.columns,
+th.column {
+  &[valign="middle"] {
+    vertical-align: middle;
+  }
+}

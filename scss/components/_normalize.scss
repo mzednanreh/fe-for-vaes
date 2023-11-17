@@ -6,8 +6,6 @@
 /// @group normalize
 ////
 
-$paragraph-margin-bottom: 10px !default;
-
 #outlook a {
   padding: 0;
 }
@@ -33,6 +31,7 @@ body {
   span,
   font,
   td,
+  th,
   div {
     line-height: 100%;
   }
@@ -58,16 +57,10 @@ img {
 
 center {
   width: 100%;
-  min-width: $global-width;
 }
 
 a img {
   border: none;
-}
-
-p {
-  margin: 0 0 0 $paragraph-margin-bottom;
-  Margin: 0 0 0 $paragraph-margin-bottom;
 }
 
 table {
@@ -75,16 +68,41 @@ table {
   border-collapse: collapse;
 }
 
-td:not([height*="px"]) {
-  word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-  border-collapse: collapse !important;
+@if $turn-On-Off-VAE-Control == true {
+  td:not([height*="px"]), th {
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    border-collapse: collapse !important;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  table:not(.spacer), tr, td:not([height*="px"]), th {
+    padding: 0;
+    vertical-align: top;
+    text-align: left;
+  }
+} @else {
+  td, th {
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    border-collapse: collapse !important;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  table, tr, td, th {
+    padding: 0;
+    vertical-align: top;
+    text-align: left;
+  }
 }
 
-table:not(.spacer), tr, td:not([height*="px"]) {
-  padding: 0;
-  vertical-align: top;
-  text-align: left;
-}
+
+

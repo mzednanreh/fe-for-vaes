@@ -30,20 +30,6 @@ $visibility-framework-classes-used: true;
     reducing the code by 626 characters
 */
 
-$columns-inside-columns-used: true;
-/* 
-  $columns-inside-columns-used: true; // Normal Behavior
-  $columns-inside-columns-used: false;
-    classes removed with this option in FALSE
-      .columns .column
-      .columns .columns
-      .column .column
-      .column .columns 
-    reducing the code by 185 characters
-    NOTE: These only alter the padding of the columns 
-    in case a column exists inside another
-*/
-
 $collapse-columns-used: true;
 /* 
   $collapse-columns-used: true; // Normal Behavior
@@ -129,4 +115,15 @@ $buttons-used: true;
       .button.small-expanded
     reducing the code by 472 characters
 */
+
+$callout-used: true;
+/* 
+  $callout-used: true; // Normal Behavior
+  $callout-used: false;
+    classes removed with this option in FALSE
+      .callout-inner
+    reducing the code by 50 characters
+*/
+
+// End VAE Control
 ```
