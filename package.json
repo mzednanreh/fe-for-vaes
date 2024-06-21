@@ -41,7 +41,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-wrap": "^0.15.0",
     "gulp-zip": "^5.0.1",
-    "inky": "^1.4.1",
+    "inky-for-vaes": "^1.4.3",
     "js-yaml": "^3.14.0",
     "lazypipe": "^1.0.1",
     "lodash.template": ">=4.5.0",
