@@ -209,26 +209,61 @@ $remove-ios-blue: true !default;
       }
 }
 
-body,
-table.body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-td,
-th {
-  color: $global-font-color;
-  font-family: $body-font-family;
-  font-weight: $global-font-weight;
-  padding: 0;
-  margin: 0;
-  Margin: 0;
-  text-align: left;
-  line-height: $global-line-height;
+@if $turn-On-Off-VAE-Control == true {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p:not(.spacer),
+  td:not(.spacer):not(.center):not([height]),
+  th {
+    color: $global-font-color;
+    font-family: $body-font-family;
+    font-weight: $global-font-weight;
+    padding: 0;
+    margin: 0;
+    Margin: 0;
+    text-align: left;
+    line-height: $global-line-height;
+  }
+
+  p.spacer {
+    margin: 0;
+    mso-line-height-rule: exactly;
+  }
+
+  body,
+  table.body {
+    padding: 0;
+    margin: 0;
+    Margin: 0;
+  }
+} @else {
+  body,
+  table.body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  td,
+  th {
+    color: $global-font-color;
+    font-family: $body-font-family;
+    font-weight: $global-font-weight;
+    padding: 0;
+    margin: 0;
+    Margin: 0;
+    text-align: left;
+    line-height: $global-line-height;
+  }
 }
+
+
 
 h1,
 h2,
@@ -268,18 +303,27 @@ h6 {
   font-size: $h6-font-size;
 }
 
-body,
-table.body,
-p,
-td,
-th {
-  font-size: $global-font-size;
-  line-height: $body-line-height;
+@if $turn-On-Off-VAE-Control == true {
+  p,
+  td:not(.center),
+  th {
+    font-size: $global-font-size;
+    line-height: $body-line-height;
+  }
+} @else {
+  body,
+  table.body,
+  p,
+  td,
+  th {
+    font-size: $global-font-size;
+    line-height: $body-line-height;
+  }
 }
 
 p {
-  margin-bottom: $paragraph-margin-bottom;
-  Margin-bottom: $paragraph-margin-bottom;
+  margin-bottom: 0;
+  Margin-bottom: 0;
 
   &.lead {
     font-size: $lead-font-size;
@@ -428,5 +472,13 @@ span.preheader {
       font-weight: inherit !important;
       line-height: inherit !important;
     }
+  }
+}
+
+// Removing links styles
+@media only screen {
+  .no-link-fix a {
+    text-decoration: none !important;
+    color: inherit !important;
   }
 }

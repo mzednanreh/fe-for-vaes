@@ -10,17 +10,28 @@
   padding: 0;
 }
 
-body {
-  width: 100% !important;
-  min-width: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  margin: 0;
-  Margin: 0;
-  padding: 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+@if $turn-On-Off-VAE-Control == true {
+  body {
+    width: 100% !important;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    margin: 0;
+    Margin: 0;
+    padding: 0;
+  }
+} @else {
+  body {
+    width: 100% !important;
+    min-width: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    margin: 0;
+    Margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 }
 
 .ExternalClass {
@@ -69,7 +80,7 @@ table {
 }
 
 @if $turn-On-Off-VAE-Control == true {
-  td:not([height*="px"]), th {
+  td:not([height]):not(.center), th {
     word-wrap: break-word;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
@@ -79,11 +90,24 @@ table {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
+
+  td.center {
+    border-collapse: collapse !important;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
   
-  table:not(.spacer), tr, td:not([height*="px"]), th {
+  table:not(.spacer):not(.body):not(.row), td:not([height]):not(.center), th {
     padding: 0;
     vertical-align: top;
     text-align: left;
+  }
+
+  tr, table.row {
+    padding: 0;
   }
 } @else {
   td, th {
